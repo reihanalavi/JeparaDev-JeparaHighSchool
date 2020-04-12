@@ -1,0 +1,2 @@
+rootProject.name='Jepara High School'
+include ':app'
