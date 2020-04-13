@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="highschool"
+            type="com.jeparadev.jeparahighschool.models.Highschool" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.DetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView_detail_npsnS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/npsn"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_detail_npsn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text="@{highschool.npsn}"
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_npsnS"
+                tools:text="20318338" />
+
+            <TextView
+                android:id="@+id/textView_detail_alamatS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/alamat_sekolah"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_npsn" />
+
+            <TextView
+                android:id="@+id/textView_detail_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text="@{highschool.alamatJalan}"
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_alamatS"
+                tools:text="JL. AMARTA III GTI JEPARA" />
+
+            <TextView
+                android:id="@+id/textView_detail_kecS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/kecamatan"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_alamat" />
+
+            <TextView
+                android:id="@+id/textView_detail_kec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text="@{highschool.kecamatan}"
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_kecS"
+                tools:text="Kec. Tahunan" />
+
+            <TextView
+                android:id="@+id/textView_detail_statusS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/status_sekolah"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_kec" />
+
+            <TextView
+                android:id="@+id/textView_detail_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text='@{highschool.status.equals("N") ? "Sekolah Negeri" : "Sekolah Swasta"}'
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_statusS"
+                tools:text="Negeri" />
+
+            <TextView
+                android:id="@+id/textView_detail_koordinatS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/koordinat_sekolah"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_status" />
+
+            <TextView
+                android:id="@+id/textView_detail_koordinat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text='@{highschool.lintang + ",\n" + highschool.bujur}'
+                app:layout_constraintTop_toBottomOf="@id/textView_detail_koordinatS"
+                tools:text="-6.6304000,\n110.7055000" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Jepara High School</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_school_level">CHOOSE SCHOOL LEVEL</string>
+    <string name="alamat_sekolah">Alamat Sekolah</string>
+    <string name="npsn">NPSN</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="status_sekolah">Status Sekolah</string>
+    <string name="koordinat_sekolah">Koordinat Sekolah</string>
+</resources>
